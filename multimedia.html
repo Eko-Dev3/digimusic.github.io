@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <!-- Metas -->
     <meta charset="utf-8">
@@ -10,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
@@ -59,25 +58,19 @@
 
                                 </div>
                                 <ul class="main-menu list-inline">
-                                    <li><a class="scroll list-inline-item" href="#wrapper">INICIO</a></li>
+                                    <li><a class="scroll list-inline-item" href="index.html">INICIO</a></li>
                                     <li><a class="scroll list-inline-item" href="noticias.html">Noticias</a></li>
                                     <li><a class="scroll list-inline-item" href="musica.html">Musica</a></li>
                                     <li><a class="scroll list-inline-item" href="multimedia.html">Multimedia</a></li>
-                                    <li><a class="scroll list-inline-item" href="#tour">EVENTOS</a></li>
-                                    <li><a class="scroll list-inline-item" href="#gallery">SOBRE MI</a></li>
+                                    <li><a class="scroll list-inline-item" href="eventos.html">EVENTOS</a></li>
+                                    <li><a class="scroll list-inline-item" href="yo.html">SOBRE MI</a></li>
 
                                 </ul>
+                               
+    
 
                             </nav>
-                            <div class="socialmedia">
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-apple"></i></a></li>
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-play"></i></a></li>
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-amazon"></i></a></li>
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-soundcloud"></i></a></li>
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-spotify"></i></a></li>
-                                <li class="list-inline-item m-2"><a href="#"><i class="socicon-youtube"></i></a></li>
-                            </div>
-
+                            
                         </div>
 
                     </div>
@@ -92,22 +85,36 @@
         <!--End hero section-->
         <style>
             .socialmedia {
-                position: absolute;
+                position: fixed;
                 left: 76%;
+                margin-top: 50px;
+                transition: all 0.3s linear;
+                box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+                z-index: 9999;
             }
             
             @media (max-width: 768px) {
                 .socialmedia {
-                    position: absolute;
-                    left: 76%;
-                    display: none;
-                }
+                position: fixed;
+                left: 36%;
+                margin-top: 30px;
+                transition: all 0.3s linear;
+                box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+                z-index: 9999;
+            }
             }
         </style>
         <!--About section-->
 
         <!--End about section-->
-
+        <div class="socialmedia">
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-apple"></i></a></li>
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-deezer"></i></a></li>
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-amazon"></i></a></li>
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-soundcloud"></i></a></li>
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-spotify"></i></a></li>
+            <li class="list-inline-item m-2"><a href="#"><i class="socicon-youtube"></i></a></li>
+        </div>
 
 
         <!--Gallery section-->
@@ -123,7 +130,7 @@
                                     <img src="/img/logodigimusic.webp" alt="">
                                 </div>
                                 <h6 class="uppercase mb-1">Multimedia </h6>
-                                <h1 class="uppercase mb-0">MULTIMEDIA </h1>
+                                <h1 class="uppercase mb-0">VIDEOS </h1>
                             </div>
                         </div>
                     </div>
@@ -132,80 +139,117 @@
             </div>
             <!--End container-->
 
-
             <!--Container-->
-            <div class="container">
-                <!--Row-->
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-9 ">
-                        <div class="block-filter text-center gap-one-bottom-sm">
-                            <ul class=" list-inline ">
-                                <li class=" list-inline-item">
-                                    <a href="javascript:void(0);" class="active" id="conciertos">
-                                        <h4 class="uppercase  mb-0">Conciertos</h4>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0);" id="estudio">
-                                        <h4 class="uppercase  mb-0">Estudio</h4>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0);" id="video">
-                                        <h4 class="uppercase  mb-0">Videos</h4>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--End row-->
-            </div>
+            <style>
+                #player {
+                    position: absolute;
+                    left: 50%;
+                    top: 40%;
+                }
+                
+                #player i {
+                    font-size: 40px;
+                    color: white;
+                    z-index: 9999;
+                    opacity: 9;
+                }
+                
+                #overlay {
+                    overflow: hidden;
+                    position: absolute;
+                    /* Sit on top of the page content */
+                    /* Hidden by default */
+                    width: 100%;
+                    display: none;
+                    /* Full width (cover the whole page) */
+                    height: 100%;
+                    /* Full height (cover the whole page) */
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(27, 27, 27, 0.5);
+                    /* Black background with opacity */
+                    /* Specify a stack order in case you're using a different order for other elements */
+                    cursor: pointer;
+                    /* Add a pointer on hover */
+                }
+                
+                .block-card:hover>#overlay {
+                    display: block;
+                }
+            </style>
             <!--End container-->
             <div class="container">
                 <!--Row-->
                 <div class="row justify-content-center text-center">
-                    <div class="col-12 ">
+                    <div class="col-12">
                         <div class="card-gallery image-gallery">
-                            <div class=" block-card image">
-                                <a href="img/gallery/1.jpg" class="popup-image mb-0 hover-effect ">
-                                    <img class="mb-0" alt="" src="img/gallery/1.jpg">
+                            <div class="block-card image">
+                                <div id="overlay"></div>
+                                <a href="#" class="popup-image mb-0 hover-effect">
+                                    <a id="player" data-fancybox href="https://youtu.be/WF3Wxpn8pG4" href="">
+                                        <i class="socicon-youtube"></i>
+                                    </a>
+
+
+                                    <img class="mb-0" alt="" src="https://ideakreativa.net/wp-content/uploads/2018/06/coursewrkwavesfeb_dribbble.jpg">
                                 </a>
                             </div>
-                            <div class=" block-card  image">
-                                <a href="img/gallery/3.jpg" class="popup-image mb-0 hover-effect">
-                                    <img class="mb-0" alt="" src="img/gallery/3.jpg">
+                            <div class="block-card image">
+                                <div id="overlay"></div>
+                                <a data-fancybox href="https://youtu.be/WF3Wxpn8pG4" class="popup-image mb-0 hover-effect ">
+                                    <a id="player" data-fancybox href="https://youtu.be/WF3Wxpn8pG4" href="">
+                                        <i class="socicon-youtube"></i>
+                                    </a>
+
+                                    <img class="mb-0" alt="" src="https://ideakreativa.net/wp-content/uploads/2018/06/daggz_vinyl_800x600.jpg">
                                 </a>
                             </div>
-                            <div class=" block-card  video">
-                                <a href="https://www.youtube.com/watch?v=Gc2en3nHxA4" class="popup-youtube mb-0 hover-effect">
-                                    <img class="mb-0" alt="" src="img/gallery/2.jpg">
+                            <div class="block-card image">
+                                <div id="overlay"></div>
+                                <a data-fancybox href="https://youtu.be/WF3Wxpn8pG4" class="popup-image mb-0 hover-effect ">
+
+                                    <a id="player" data-fancybox href="https://youtu.be/WF3Wxpn8pG4" href="">
+                                        <i class="socicon-youtube"></i>
+                                    </a>
+                                    <img class="mb-0" alt="" src="https://ideakreativa.net/wp-content/uploads/2018/06/osmutantes_tropicalia_tribute.jpg">
                                 </a>
                             </div>
-                            <div class=" block-card  video">
-                                <a href="https://www.youtube.com/watch?v=Gc2en3nHxA4" class="popup-youtube mb-0 hover-effect">
-                                    <img class="mb-0" alt="" src="img/gallery/4.jpg">
+                            <div class="block-card image">
+                                <div id="overlay"></div>
+                                <a data-fancybox href="https://youtu.be/WF3Wxpn8pG4" class="popup-image mb-0 hover-effect ">
+                                    <a id="player" data-fancybox href="https://youtu.be/WF3Wxpn8pG4" href="">
+                                        <i class="socicon-youtube"></i>
+                                    </a>
+                                    <img class="mb-0" alt="" src="https://ideakreativa.net/wp-content/uploads/2018/06/coursewrkwavesfeb_dribbble.jpg">
                                 </a>
                             </div>
-                            <div class=" block-card  image">
-                                <a href="img/gallery/6.jpg" class="popup-image mb-0 hover-effect ">
-                                    <img class="mb-0" alt="" src="img/gallery/6.jpg">
+                            <div class="block-card image">
+                                <div id="overlay"></div>
+                                <a data-fancybox href="https://youtu.be/WF3Wxpn8pG4" class="popup-image mb-0 hover-effect ">
+                                    <a id="player" data-fancybox href="https://youtu.be/WF3Wxpn8pG4" href="">
+                                        <i class="socicon-youtube"></i>
+                                    </a>
+
+                                    <img class="mb-0" alt="" src="https://ideakreativa.net/wp-content/uploads/2018/06/coursewrkwavesfeb_dribbble.jpg">
                                 </a>
                             </div>
-                            <div class=" block-card  video">
-                                <a href="https://www.youtube.com/watch?v=Gc2en3nHxA4" class="popup-youtube mb-0 hover-effect">
-                                    <img class="mb-0" alt="" src="img/gallery/5.jpg">
-                                </a>
-                            </div>
+
                         </div>
+
+                        <!--  -->
+
                     </div>
+
                 </div>
                 <!--End row-->
             </div>
         </section>
         <!--End gallery section-->
+
         <!--Socials section-->
-        <section class="socials main">
+        <section class="socials main d-none">
             <!-- As a general rule, include a heading (h1-h6) as a child of each section and article element for screen readers purposes-->
             <h2 class="uppercase indent">Redes sociales</h2>
             <!--Container-->
@@ -381,6 +425,8 @@
     <script src="js/placeholders.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/actions.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
     <!-- Google analytics -->
 
