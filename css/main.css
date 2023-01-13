@@ -218,7 +218,8 @@ Created by : mutationthemes
     left: 76%;
     margin-top: 50px;
     transition: all 0.3s linear;
-    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+    /* box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4); */
+    
     z-index: 9999;
 }
 
