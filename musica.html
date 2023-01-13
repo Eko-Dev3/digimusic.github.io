@@ -10,13 +10,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600%7cPermanent+Marker" rel="stylesheet">
+     <!-- Css -->
+     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600%7cPermanent+Marker" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js">
+     <!-- CSS -->
+     <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+     <!-- JS -->
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="jquery.fancybox.min.js"></script>
+     <!-- Magnific Popup core CSS file -->
+     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+ 
+     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+     <!-- Magnific Popup core JS file -->
+     <script src="magnific-popup/jquery.magnific-popup.js"></script>
 </head>
 
 <body>
@@ -57,12 +72,12 @@
                                     </a>
                                 </div>
                                 <ul class="main-menu list-inline">
-                                    <li><a class="scroll list-inline-item" href="#wrapper">iNICIO</a></li>
-                                    <li><a class="scroll list-inline-item" href="#about">Noticias</a></li>
-                                    <li><a class="scroll list-inline-item" href="#discography">Musica</a></li>
-                                    <li><a class="scroll list-inline-item" href="#band">Multimedia</a></li>
-                                    <li><a class="scroll list-inline-item" href="#tour">EVENTOS</a></li>
-                                    <li><a class="scroll list-inline-item" href="#gallery">SOBRE MI</a></li>
+                                    <li><a class="scroll list-inline-item" href="#wrapper">INICIO</a></li>
+                                    <li><a class="scroll list-inline-item" href="noticias.html">Noticias</a></li>
+                                    <li><a class="scroll list-inline-item activo" href="musica.html">Musica</a></li>
+                                    <li><a class="scroll list-inline-item" href="multimedia.html">Videos</a></li>
+                                    <li><a class="scroll list-inline-item" href="#tour">Eventos</a></li>
+                                    <li><a class="scroll list-inline-item" href="#gallery">Sobre mi</a></li>
 
                                 </ul>
 
@@ -104,18 +119,44 @@
         </style>
 
         <!--Latest album section-->
-        <section class="latest main brd-bottom">
+        <section class="latest main brd-bottom mt-5">
             <!--Container-->
-
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9 ">
+                    <div class="block-content text-center gap-one-bottom-md">
+                        <div class="block-title ">
+                            <div class="block-bars">
+                                <img src="img/logodigimusic.webp" alt="">
+                            </div>
+                            <h6 class="uppercase mb-1">SINGELS LANZADO </h6>
+                            <h1 class="uppercase mb-0">ÚLTIMO SENCILLO</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--End container-->
+            <style>
+                /* .musicas .portada {
+                    height: 670px;
+                    max-height: 500px;
+                    width: 100%;
+                }
+                
+                @media only screen and (max-width: 768px) {
+                    .musicas .portada {
+                        height: 670px;
+                        max-height: 400px;
+                    }
+                } */
+            </style>
             <!--Container-->
-            <div class="container">
+            <div class="container musicas">
                 <!--Row-->
                 <div class="row vertical-align">
-                    <div class="col-lg-8  ">
-                        <img class="mb-0" src="https://i.scdn.co/image/ab67616d0000b273a7eaf22877864b81a7bc8fa3" alt="">
+                    <div class="col-lg-8">
+                        <img class="mb-0 portada" src="https://ideakreativa.net/wp-content/uploads/2018/06/osmutantes_tropicalia_tribute.jpg" alt="">
                     </div>
-                    <div class="offset-lg-1  col-lg-3  ">
+                    <div class="offset-lg-1  col-lg-3">
                         <div class="block-content ">
                             <div class="block-album-info">
                                 <ul>
@@ -139,7 +180,10 @@
                                     </li>
                                 </ul>
                             </div>
+
+
                             <ul class="block-social list-inline mt-4">
+                                <h5 class="uppercase list-inline-item ">Escuche ahora!!</h5> <br><br>
                                 <li class="list-inline-item mr-0"><a href="#"><i class="socicon-apple"></i></a></li>
                                 <li class="list-inline-item mr-0"><a href="#"><i class="socicon-deezer"></i></a></li>
                                 <li class="list-inline-item mr-0"><a href="#"><i class="socicon-amazon"></i></a></li>
@@ -151,175 +195,203 @@
                     </div>
                 </div>
                 <!--End row-->
-            </div>
-            <!--End container-->
-            <!--Container-->
-            <div class="container">
-                <!--Row-->
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-9 col-md-12">
-                        <div class="block-tracklist gap-one-top-md">
-                            <!-- <audio preload class="album"></audio> -->
-                            <ol class="playlist">
-                                <li>
-                                    <div class="as-link">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 ">
-                                                <div class="block-track ml-5">
-                                                    <h5 class="mb-0  uppercase">Amor vivo</h5>
-                                                    <span class="opc-50">Sin limites </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 text-md-right">
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="as-link" data-src="mp3/01.mp3">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 ">
-                                                <div class="block-track ml-5">
-                                                    <h5 class="mb-0  uppercase">Amor vivo</h5>
-                                                    <span class="opc-50">Sin limites </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 text-md-right">
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="as-link" data-src="mp3/01.mp3">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 ">
-                                                <div class="block-track ml-5">
-                                                    <h5 class="mb-0  uppercase">Amor vivo</h5>
-                                                    <span class="opc-50">Sin limites </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 text-md-right">
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="as-link" data-src="mp3/01.mp3">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 ">
-                                                <div class="block-track ml-5">
-                                                    <h5 class="mb-0  uppercase">Amor vivo</h5>
-                                                    <span class="opc-50">Sin limites </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 text-md-right">
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="as-link" data-src="mp3/01.mp3">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 ">
-                                                <div class="block-track ml-5">
-                                                    <h5 class="mb-0  uppercase">Amor vivo</h5>
-                                                    <span class="opc-50">Sin limites </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 text-md-right">
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
-                                                <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
 
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <!--End row-->
             </div>
             <!--End container-->
+
         </section>
 
         <!--End latest album section-->
         <!--Discography section-->
         <section id="discography" class="discography main">
-            <img class="pattern-center" src="img/center-pattern.png" alt="">
+            <img class="pattern-center" src="" alt="">
             <!--Container-->
 
             <!--End container-->
             <!--Container-->
             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-9 ">
+                        <div class="block-content text-center gap-one-bottom-md">
+                            <div class="block-title ">
+                                <div class="block-bars">
+                                    <img src="/img/logodigimusic.webp" alt="">
+                                </div>
+                                <h6 class="uppercase mb-1">Siga escuchando</h6>
+                                <h1 class="uppercase mb-0">Mas sencillos</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--Row-->
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3">
+                <style>
+                    #sigaescuchando img {
+                        object-fit: cover;
+                        height: 300px;
+                    }
+                </style>
+
+                <div class="row" id="sigaescuchando">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="block-content">
                             <a href="javascript:void(0);" class="hover-effect">
                                 <div class="block-album p-3">
-                                    <img src="img/6.jpg" alt="">
+                                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/186737659/original/5bbf057aecc23f24deab6b4112f87150f3a59149/con-un-poco-de-arte-el-mundo-sera-mejor.jpg" alt="">
                                     <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
+
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="block-content ">
-                            <a href="album-single.html" class="hover-effect">
-                                <div class="block-album p-3">
-                                    <img src="img/7.jpg" alt="">
-                                    <h4 class="uppercase mb-0">Libérame</h4>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="block-content">
-                            <a href="album-single.html" class="hover-effect">
+                            <a href="javascript:void(0);" class="hover-effect">
                                 <div class="block-album p-3">
-                                    <img src="img/8.jpg" alt="">
-                                    <h4 class="uppercase mb-0">Como sesiente</h4>
+                                    <img src="https://ideakreativa.net/wp-content/uploads/2018/06/coursewrkwavesfeb_dribbble.jpg" alt="">
+                                    <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
+
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="block-content  ">
-                            <a href="album-single.html" class="hover-effect">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-content">
+                            <a href="javascript:void(0);" class="hover-effect">
                                 <div class="block-album p-3">
-                                    <img src="img/9.jpg" alt="">
-                                    <h4 class="uppercase mb-0">Esta noche</h4>
+                                    <img src="https://ideakreativa.net/wp-content/uploads/2018/06/daggz_vinyl_800x600.jpg" alt="">
+                                    <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-content">
+                            <a href="javascript:void(0);" class="hover-effect">
+                                <div class="block-album p-3">
+                                    <img src="https://ideakreativa.net/wp-content/uploads/2018/06/osmutantes_tropicalia_tribute.jpg" alt="">
+                                    <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-content">
+                            <a href="javascript:void(0);" class="hover-effect">
+                                <div class="block-album p-3">
+                                    <img src="https://ideakreativa.net/wp-content/uploads/2018/06/grace-album-cover.jpg" alt="">
+                                    <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-content">
+                            <a href="javascript:void(0);" class="hover-effect">
+                                <div class="block-album p-3">
+                                    <img src="https://ideakreativa.net/wp-content/uploads/2018/06/41184894068.jpg" alt="">
+                                    <h4 class="uppercase mb-0">Sin limites</h4>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="block-track ml-5">
+                                                <h5 class="mb-3  uppercase">Escuche ahora!!</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-md-right">
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="icon-apple"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-deezer"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-amazon"></i></a>
+                                            <a href="#" class="btn-s uppercase btn with-ico"><i class="socicon-spotify"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
