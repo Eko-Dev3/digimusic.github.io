@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".block-cat").click(function() {
-        $.get("/function/fetchdetail.html", function(data) {
+        $.get("https://eko-dev3.github.io/digimusic.github.io/function/fetchdetail.html", function(data) {
 
 
             $("#blog").html(data);
