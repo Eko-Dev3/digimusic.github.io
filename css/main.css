@@ -241,7 +241,7 @@
     height: 1.5rem;
     position: absolute;
     right: 15px;
-    top: 32px;
+    top: -42px;
     z-index: 1000;
     display: none;
 }
